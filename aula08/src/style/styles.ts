@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const MinhaTabela = styled.table`
   border-collapse: collapse;
-  width: 80%;
-  margin: 20px auto;
+  width: 70%;
+  margin: 0 auto;
   
     &  thead{
         background-color: beige;
@@ -37,10 +37,10 @@ export const MinhaTabela = styled.table`
         }
     }
 
-    & tr :nth-child(odd){
+    & tr:nth-child(odd){
         background-color: #e2e2e2;
     }
-    & tr :nth-child(even){
+    & tr:nth-child(even){
         background-color: #eddede;
     }
   `
