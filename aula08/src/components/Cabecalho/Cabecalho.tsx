@@ -1,18 +1,12 @@
-import imgCadeado from "../../img/favicon.ico";
+import { Link } from "react-router-dom";
 
-import Menu from "../Menu/Menu";
-
-export default function Cabecalho(){
+export default function Menu(){
     return(
-        <header>
-            <h1>Cabeçalho</h1>
-            <img src={imgCadeado} alt="Cadeado" />
-            <div>
-                <img src="/img/favicon.ico" alt="" />
-            </div>
-
-            <Menu/>
-        </header>
-    )
-
+        <nav>
+            <ul>
+                <li><Link to="/">Home</Link></li> 
+                <li><Link to="/produtos">Produtos</Link></li> 
+            </ul>
+        </nav>
+    );
 }
