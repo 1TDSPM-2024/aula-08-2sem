@@ -1,9 +1,30 @@
 import { Link } from "react-router-dom";
-import { listaProdutos } from "../../listaProdutos";
 import { MinhaTabela } from "../../style/styles";
+import { useEffect, useState } from "react";
+import { TipoProduto } from "../../types";
+import { listaProdutos } from "../../listaProdutos";
 
 export default function Produtos(){
 
+  const [produtos, setProdutos] = useState([{
+    id:0,
+    nome:"",
+    marca:"",
+    desc:"",
+    preco:0,
+    foto:"",
+}])
+
+//Recepção dos dados que vem do UseState verificando se a lista está completa
+//Caso ela não esteja, é setado um array de string vazio
+const listaProdutosString = localStorage.getItem('lista') || '[]';
+const lista:TipoProduto[] = JSON.parse(listaProdutosString);
+
+  useEffect(() => {
+    listaProdutos.length;
+    setProdutos(lista);
+  }, [lista])
+  
     return(
       <div>
         <h1>Produtos Eletrônicos</h1>
@@ -21,7 +42,7 @@ export default function Produtos(){
           </thead>
         
         <tbody>
-        {listaProdutos.map((prod)=>(
+        {produtos.map((prod)=>(
           <tr key={prod.id}>
             <td>{prod.nome}</td>
             <td>{prod.marca}</td>
@@ -44,9 +65,3 @@ export default function Produtos(){
       </div>
     );
   }
-  // id:number;
-  // nome:string;
-  // marca:string;
-  // desc:string;
-  // preco:number;
-  // foto:string;
