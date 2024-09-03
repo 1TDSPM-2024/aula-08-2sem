@@ -1,5 +1,9 @@
-type TipoProduto = {
+type TipoProduto = 
+{
     id: number,
     nome: string,
-    preco:number
+    marca:string,
+    desc:string,
+    preco:number,
+    foto:string
 }
