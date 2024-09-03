@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { listaProdutos } from "../../listaProdutos";
-
-
+import { MinhaTabela } from "../../style/styles";
 
 export default function Produtos(){
 
@@ -9,7 +8,7 @@ export default function Produtos(){
       <div>
         <h1>Produtos Eletrônicos</h1>
 
-        <table>
+        <MinhaTabela>
           <thead>
             <tr>
               <th>Nome</th>
@@ -41,7 +40,7 @@ export default function Produtos(){
             </td>
           </tr>
         </tfoot>
-      </table>
+      </MinhaTabela>
       </div>
     );
   }
